@@ -13,7 +13,7 @@ api = Api(app)
 
 #Apis
 api.add_resource(user.UserAPI, '/user_api')
-api.add_resource(user.UserAPI, '/login_api')
+api.add_resource(user.LoginAPI, '/login_api')
 
 #Setup database
 app.secret_key = '8a610d19-d675-4eb4-ad96-8fc603821e02'

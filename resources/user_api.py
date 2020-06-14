@@ -10,7 +10,7 @@ class UserAPI(Resource):
         fullname = flask.request.form.get('fullname', "")
         return(User.add_user(username, password,fullname))
 
-class Login(Resource):
+class LoginAPI(Resource):
     def post(self):
         result = check_valid_user(flask.request.form.get('username', ""),flask.request.form.get('password', ""))
         data = flask.jsonify(result)
