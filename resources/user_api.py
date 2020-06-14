@@ -1,6 +1,7 @@
 from flask_restful import Resource
 from models.user import User
 import flask
+import json
 from utils.login_util import check_valid_user
 
 class UserAPI(Resource):
@@ -12,10 +13,9 @@ class UserAPI(Resource):
 
 class LoginAPI(Resource):
     def post(self):
-        params= flask.jsonify(flask.request.data.decode('utf8').replace("'", '"'))
+        params= json.loads(flask.request.data.decode('utf8').replace("'", '"'))
         print(type(params))
-        print(type(flask.request.data.decode('utf8').replace("'", '"')))
-        result = check_valid_user(flask.request.data['username'],flask.request.data['password'])
+        result = check_valid_user(params['username'],params['password'])
         data = flask.jsonify(result)
         if result['is_logged_in']:
             return flask.make_response(data, 200)
