@@ -5,10 +5,12 @@ from db import db
 import os
 from flask_migrate import Migrate
 from resources import user_api as user
+from flask_cors import CORS
 
 
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 #Apis
