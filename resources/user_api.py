@@ -12,6 +12,7 @@ class UserAPI(Resource):
 
 class LoginAPI(Resource):
     def post(self):
+        print(flask.request.form.get('username', ""),flask.request.form.get('password', ""))
         result = check_valid_user(flask.request.form.get('username', ""),flask.request.form.get('password', ""))
         data = flask.jsonify(result)
         if result['is_logged_in']:
