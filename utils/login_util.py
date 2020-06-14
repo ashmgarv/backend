@@ -2,6 +2,7 @@ from models.user import User as usr
 from werkzeug.security import check_password_hash
 
 def check_valid_user(username, password):
+    print(username, password)
     try:
         login_result = login(username, password)
     except Exception as e:
