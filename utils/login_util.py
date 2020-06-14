@@ -3,6 +3,7 @@ from werkzeug.security import check_password_hash
 
 def check_valid_user(username, password):
     try:
+        print("printing Details", username, password)
         login_result = login(username, password)
     except Exception as e:
         return {'is_logged_in':False,'fullname':"none"}
