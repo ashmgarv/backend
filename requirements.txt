@@ -12,7 +12,7 @@ autopep8==1.4.3
 Babel==2.6.0
 backcall==0.1.0
 bar==0.2.1
-bleach==3.0.2
+bleach==3.1.4
 boto3==1.9.140
 botocore==1.12.140
 bson==0.5.9
