@@ -1,0 +1,6 @@
+[default]
+env_dbuname = "INF_UNAME"
+env_dbhost = "INF_DBHOST"
+env_dbpwd = "INF_PWD"
+env_dbport = "INF_PORT"
+env_dbname = "INF_DBNAME"
