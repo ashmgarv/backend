@@ -12,7 +12,7 @@ class UserAPI(Resource):
 
 class LoginAPI(Resource):
     def post(self):
-        params= flask.request.data.decode('utf8').replace("'", '"')
+        params= flask.jsonify(flask.request.data.decode('utf8').replace("'", '"'))
         print(params)
         print(params['username'], params['password'])
         result = check_valid_user(flask.request.data['username'],flask.request.data['password'])
