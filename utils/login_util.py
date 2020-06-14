@@ -13,8 +13,8 @@ def check_valid_user(username, password):
 
 def login(username, password):
     try:
-        print(username, password)
         logged_in_user = usr.query.filter_by(username=username).first()
+        print(username, password)
         print(logged_in_user)
     except Exception as e:
         print("Error occured while trying to login : " + str(e))
