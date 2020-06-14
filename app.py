@@ -22,10 +22,5 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 
-@app.route('/')
-def hello_world():
-    return os.environ[settings.ENV_DBUNAME]
-
-
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='localhost', port=7000)
